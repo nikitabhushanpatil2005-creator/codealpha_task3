@@ -1,0 +1,485 @@
+<!-- TASK 3: PERSONAL PORTFOLIO -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nikita Patil | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+    line-height: 1.6;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: #11172b;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #50d5ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #50d5ff;
+}
+
+section {
+    padding: 80px 7%;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #26376d, #0b1020 60%);
+}
+
+.hero h1 {
+    font-size: clamp(40px, 8vw, 75px);
+}
+
+.hero h1 span {
+    color: #50d5ff;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 20px auto;
+    color: #adb5cc;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 7px;
+    border-radius: 25px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+}
+
+.section-title p {
+    color: #adb5cc;
+}
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: #adb5cc;
+    font-size: 17px;
+}
+
+.skills {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    padding: 20px;
+    text-align: center;
+    background: #151d35;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background: #202b4d;
+}
+
+.projects {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #151d35;
+    padding: 25px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    color: #50d5ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #adb5cc;
+}
+
+.tags {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 15px;
+    background: #26304f;
+    font-size: 12px;
+}
+
+.resume {
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    text-align: center;
+    background: #151d35;
+    border-radius: 20px;
+}
+
+.resume p {
+    color: #adb5cc;
+    margin: 15px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background: #151d35;
+    border-radius: 20px;
+}
+
+.contact-box p {
+    color: #adb5cc;
+    margin: 12px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #adb5cc;
+    border-top: 1px solid #202840;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Nikita<span>.</span>
+</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>
+Hi, I'm <span>Nikita Patil</span>
+</h1>
+
+<p>
+IT Engineering student passionate about programming,
+software development, problem solving and learning
+new technologies.
+</p>
+
+<a href="#projects" class="btn">
+View Projects
+</a>
+
+<a href="#contact" class="btn">
+Contact Me
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="section-title">
+
+<h2>About Me</h2>
+
+<p>Get to know me</p>
+
+</div>
+
+<div class="about">
+
+<p>
+I am an IT Engineering student at R. C. Patel Institute
+of Technology. I am interested in programming, software
+development and practical technology projects. I enjoy
+learning new technologies and improving my technical
+and problem-solving skills.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="section-title">
+
+<h2>Skills</h2>
+
+<p>My technical skills</p>
+
+</div>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">C++</div>
+<div class="skill">C</div>
+<div class="skill">HTML & CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">DSA</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Team Collaboration</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="section-title">
+
+<h2>Projects</h2>
+
+<p>My academic and practice projects</p>
+
+</div>
+
+<div class="projects">
+
+<div class="card">
+
+<h3>Banker's Algorithm Simulation</h3>
+
+<p>
+An interactive educational simulation for deadlock
+avoidance and resource allocation. It checks safe
+states and generates safe sequences.
+</p>
+
+<div class="tags">
+<span class="tag">Operating Systems</span>
+<span class="tag">Java</span>
+<span class="tag">Python</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Health Mate AI</h3>
+
+<p>
+A healthcare project focused on symptom analysis,
+disease prediction and intelligent assistance using
+AI and machine learning concepts.
+</p>
+
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">AI</span>
+<span class="tag">Machine Learning</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Python Programming Practice</h3>
+
+<p>
+Practice projects covering data types, loops,
+functions, debugging and programming fundamentals.
+</p>
+
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">Programming</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="resume">
+
+<div class="section-title">
+
+<h2>Resume</h2>
+
+<p>My professional profile</p>
+
+</div>
+
+<div class="resume">
+
+<h3>IT Engineering Student</h3>
+
+<p>
+B.Tech in Information Technology<br>
+R. C. Patel Institute of Technology
+</p>
+
+<p>
+Interested in software development, programming,
+AI and real-world technology projects.
+</p>
+
+<a href="https://gofile.io/d/X05SG2wm" class="btn" target="_blank">
+    Download Resume
+</a>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="section-title">
+
+<h2>Contact Me</h2>
+
+<p>Let's connect</p>
+
+</div>
+
+<div class="contact-box">
+
+<p>
+<strong>Email:</strong>
+nikitap@gmail.com
+</p>
+
+<p>
+<strong>LinkedIn:</strong>
+Add your LinkedIn profile
+</p>
+
+<p>
+<strong>GitHub:</strong>
+Add your GitHub profile
+</p>
+
+<a href="mailto:nikitap@gmail.com" class="btn">
+Send Email
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Nikita Patil | Personal Portfolio
+
+</footer>
+
+</body>
+</html>
